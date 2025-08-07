@@ -22,6 +22,7 @@
         langchain-community
         # langchain-openai
         langchain-ollama
+        pydantic
         # langchainhub
       ]);
     in {
