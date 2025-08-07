@@ -20,13 +20,15 @@
         jupyterlab
         langchain
         langchain-community
-        langchain-openai
+        # langchain-openai
+        langchain-ollama
         # langchainhub
       ]);
     in {
       default = pkgs.mkShellNoCC {
         packages = [
           pythonEnv
+          pkgs.nix-init
         ];
 
         shellHook = ''
