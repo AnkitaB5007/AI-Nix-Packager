@@ -17,6 +17,7 @@
 
       pythonEnv = pkgs.python3.withPackages (ps: with ps; [
         jupyterlab
+        pydantic
       ]);
     in {
       default = pkgs.mkShellNoCC {
