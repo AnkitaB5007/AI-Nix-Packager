@@ -20,10 +20,9 @@
     2. Choose a model
     3. Download the model
     4. Change the code?
-  * If using OpenAI
-    1. Copy `.OpenAI-API-Key-example.sh` to `.OpenAI-API-Key.sh`
-    2. Edit `.OpenAI-API-Key.sh` to add an actual API key
-    3. Change the code?
+  * If using OpenAI or similar providers
+    1. Open the file .env in an editor
+    2. Paste the API key
 6. Run `jupyter-lab` and open `AI-Nix-Packager.ipynb`
 7. Pick a project or program, which is not yet packaged in Nixpkgs
 8. Edit the code and add the program name
