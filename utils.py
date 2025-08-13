@@ -22,7 +22,7 @@ def parse_error_from_nix_output(output):
             continue
         if "raw_msg" in parsed:
             error_message = parsed["raw_msg"]
-            derivation_path_search = re.search('For full logs, run:\n  nix log (/nix/store/.*.drv)', error_message)
+            derivation_path_search = re.search('nix log (/nix/store/.*\.drv)', error_message)
             if derivation_path_search:
                 derivation_path = derivation_path_search.group(1)
                 # TODO: teach nix log to respect the NO_COLOR environment variable
@@ -30,5 +30,5 @@ def parse_error_from_nix_output(output):
             error_message = ansi_escape.sub('', error_message)
             error_messages.append(error_message)
     num_error_messages = len(error_messages)
-    assert num_error_messages == 1, f"Unexpected number of error messages. Expected 1, found {num_error_messages}"
+    assert num_error_messages == 1, f"Unexpected number of error messages. Expected 1, found {num_error_messages}, output: {output}"
     return error_messages[0]
