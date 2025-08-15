@@ -1,6 +1,8 @@
 /.direnv/
-/__pycache__/
-/.ipynb_checkpoints/
+__pycache__/
+.ipynb_checkpoints/
 /.OpenAI-API-Key.sh
 /output/
 /.env
+/create_dataset/dataset.db
+/create_dataset/export.jsonl
