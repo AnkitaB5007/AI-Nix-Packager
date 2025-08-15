@@ -5,3 +5,4 @@ __pycache__/
 /output/
 /.env
 /create_dataset/dataset.db
+/create_dataset/export.jsonl
